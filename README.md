@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+Twitter Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Twitter Picker is a free tool designed to facilitate the creation of contests and the selection of winners from a tweet using a retweet picker.
+How It Works
 
-Currently, two official plugins are available:
+After entering your tweet link or ID, Twitter Picker retrieves all the users who retweeted the tweet. You can then conduct a draw from these users. Optionally, you may customize the filter requirements to exclude bots and ensure fairness.
+Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Tailwind CSS: For designing and styling the user interface with a utility-first CSS framework.
+    TypeScript: For adding static type definitions to JavaScript, enabling more robust and maintainable code.
+    React: As the primary library for building the user interface, facilitating the creation of interactive components.
+    Axios: For handling HTTP requests to interact with the Twitter API and retrieve data.
+    dotenv: For managing environment variables securely, ensuring sensitive information such as API keys are not exposed.
 
-## Expanding the ESLint configuration
+Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    Retweet Collection: Gather a list of users who have retweeted a specific tweet.
+    Customizable Filters: Apply filters to exclude bots or non-compliant users from the draw.
+    Random Winner Selection: Randomly select winners from the filtered list of retweeters.
 
-- Configure the top-level `parserOptions` property like this:
+Example Usage
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    Enter Tweet Link/ID: Provide the link or ID of the tweet you want to draw winners from.
+    Fetch Retweeters: Twitter Picker will fetch and display all users who have retweeted the tweet.
+    Apply Filters: Customize filters to exclude bots or apply other criteria.
+    Draw Winners: Conduct a random draw to select the winners.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Benefits
+
+    Fair and Transparent: Ensures that contests are fair and transparent by providing a clear process for winner selection.
+    Easy to Use: Simple interface and straightforward process make it easy for anyone to create and manage contests.
+    Secure: Utilizes environment variables to keep sensitive information secure.
